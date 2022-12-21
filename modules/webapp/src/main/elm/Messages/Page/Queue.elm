@@ -10,6 +10,7 @@ module Messages.Page.Queue exposing
     , de
     , fr
     , gb
+    , es
     )
 
 import Data.TimeZone exposing (TimeZone)
@@ -125,3 +126,31 @@ fr tz =
     , formatDateTime = DF.formatDateTimeLong Messages.UiLanguage.French tz
     , sidebarTitle = "En cours"
     }
+
+
+es : TimeZone -> Texts
+es tz =
+    { basics = Messages.Basics.es
+    , httpError = Messages.Comp.HttpError.es
+    , currentlyRunning = "En curso"
+    , queue = "Tareas"
+    , waiting = "En espera"
+    , errored = "Fallidas"
+    , success = "Completadas"
+    , cancelled = "Anuladas"
+    , noJobsRunning = "No hay tareas en curso."
+    , noJobsDisplay = "No hay tareas que mostrar."
+    , noJobsWaiting = "No hay tareas en espera."
+    , noJobsFailed = "No hay tarea fallidas."
+    , noJobsSuccess = "No hay tareas completadas."
+    , noJobsCancelled = "No hay tareas canceladas."
+    , deleteThisJob = "¿Anular/Eliminar esta tarea?"
+    , showLog = "Mostrar el registro"
+    , remove = "Eliminar"
+    , retries = "Reintentos"
+    , changePriority = "Cambiar la prioridad de esta tarea."
+    , prio = "Prio"
+    , formatDateTime = DF.formatDateTimeLong Messages.UiLanguage.French tz
+    , sidebarTitle = "En curso"
+    }
+

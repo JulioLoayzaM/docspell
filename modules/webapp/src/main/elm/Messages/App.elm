@@ -10,6 +10,7 @@ module Messages.App exposing
     , de
     , fr
     , gb
+    , es
     )
 
 
@@ -78,3 +79,20 @@ fr =
     , newItemsArrived = "De nouveaux documents sont arrivés!"
     , dashboard = "Tableau de bord"
     }
+
+es : Texts
+es =
+    { collectiveProfile = "Perfil de grupo"
+    , userProfile = "Perfil de usuario"
+    , lightDark = "Claro/Oscuro"
+    , logout = "Desconexión"
+    , items = "Documentos"
+    , manageData = "Administrar metadatos"
+    , uploadFiles = "Subir documentos"
+    , processingQueue = "Cola de procesamiento"
+    , newInvites = "Nuevas invitaciones"
+    , help = "Ayuda"
+    , newItemsArrived = "¡Nuevos documentos están disponibles!"
+    , dashboard = "Panel principal"
+    }
+

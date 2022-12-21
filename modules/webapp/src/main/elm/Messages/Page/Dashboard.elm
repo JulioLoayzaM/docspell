@@ -5,7 +5,7 @@
 -}
 
 
-module Messages.Page.Dashboard exposing (Texts, de, fr, gb)
+module Messages.Page.Dashboard exposing (Texts, de, fr, gb, es)
 
 import Data.TimeZone exposing (TimeZone)
 import Messages.Basics
@@ -147,3 +147,35 @@ fr tz =
     , dashboards = "Tableaux de bord"
     , predefinedMessage = "Ce tableau de bord est prédéfini et ne peut être supprimer. Il est remplacé par le premier que vous enregistrez."
     }
+
+
+es : TimeZone -> Texts
+es tz =
+    { basics = Messages.Basics.es
+    , bookmarkChooser = Messages.Comp.BookmarkChooser.fr
+    , notificationHookManage = Messages.Comp.NotificationHookManage.fr
+    , periodicQueryManage = Messages.Comp.PeriodicQueryTaskManage.fr tz
+    , sourceManage = Messages.Comp.SourceManage.fr
+    , shareManage = Messages.Comp.ShareManage.fr tz
+    , organizationManage = Messages.Comp.OrgManage.fr
+    , personManage = Messages.Comp.PersonManage.fr
+    , equipManage = Messages.Comp.EquipmentManage.fr
+    , tagManage = Messages.Comp.TagManage.fr
+    , folderManage = Messages.Comp.FolderManage.fr tz
+    , uploadForm = Messages.Comp.UploadForm.fr
+    , dashboard = Messages.Comp.DashboardView.fr tz
+    , dashboardManage = Messages.Comp.DashboardManage.fr
+    , defaultDashboard = Messages.Page.DefaultDashboard.fr
+    , accountScope = Messages.Data.AccountScope.fr
+    , manage = "Administrar metadatos"
+    , dashboardLink = "Panel principal"
+    , bookmarks = "Marcadores"
+    , misc = "Diverso"
+    , settings = "Configuración"
+    , documentation = "Documentación"
+    , uploadFiles = "Subir documentos"
+    , editDashboard = "Editar el panel principal"
+    , dashboards = "Paneles"
+    , predefinedMessage = "Este panel es predefinido y no puede ser eliminado. Será remplazado por el primero que cree."
+    }
+

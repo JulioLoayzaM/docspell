@@ -10,6 +10,7 @@ module Messages.Page.Search exposing
     , de
     , fr
     , gb
+    , es
     )
 
 import Data.TimeZone exposing (TimeZone)
@@ -263,4 +264,65 @@ fr tz =
     , linkItemsHeader = "Lier des documents"
     , downloadAll = "Télécharger tout"
     , downloadAllQueryNeeded = "Tout ne peut pas être téléchargé, il faut chercher quelque chose."
+    }
+
+
+es : TimeZone -> Texts
+es tz =
+    { basics = Messages.Basics.es
+    , itemCardList = Messages.Comp.ItemCardList.fr tz
+    , searchStatsView = Messages.Comp.SearchStatsView.fr
+    , sideMenu = Messages.Page.SearchSideMenu.fr
+    , itemMerge = Messages.Comp.ItemMerge.fr tz
+    , publishItems = Messages.Comp.PublishItems.fr tz
+    , bookmarkManage = Messages.Comp.BookmarkQueryManage.fr
+    , downloadAllComp = Messages.Comp.DownloadAll.fr
+    , contentSearch = "Buscar..."
+    , searchInNames = "Buscar por nombre..."
+    , selectModeTitle = "Seleccionar modo"
+    , fullHeightPreviewTitle = "Vista previa de la altura total"
+    , fullWidthPreviewTitle = "Vista previa del ancho total"
+    , powerSearchPlaceholder = "Búsqueda..."
+    , reallyReprocessQuestion = "¿Reprocesar todos los documentos seleccionados? Los metadatos de los documentos no confirmados pueden cambiar."
+    , reallyDeleteQuestion = "¿Eliminar los documentos seleccionados?"
+    , reallyRestoreQuestion = "¿Restaurar todos los documentos seleccionados?"
+    , editSelectedItems = \n -> "Editar " ++ String.fromInt n ++ " documentos seleccionados"
+    , reprocessSelectedItems = \n -> "Reprocesar " ++ String.fromInt n ++ " documentos seleccionados"
+    , deleteSelectedItems = \n -> "Eliminar " ++ String.fromInt n ++ " documentos seleccionados"
+    , undeleteSelectedItems = \n -> "Restaurar " ++ String.fromInt n ++ " documentos seleccionados"
+    , selectAllVisible = "Seleccionar todos los documentos visibles"
+    , selectNone = "Deseleccionar todo"
+    , resetSearchForm = "Restablecer el formulario de búsqueda"
+    , exitSelectMode = "Salir del modo de selección"
+    , mergeItemsTitle = \n -> "Fusionar " ++ String.fromInt n ++ " documentos seleccionados"
+    , publishItemsTitle = \n -> "Publicar " ++ String.fromInt n ++ " documentos seleccionados"
+    , publishCurrentQueryTitle = "Publicar los resultados actuales"
+    , shareResults = "Compartir los resultados"
+    , nothingSelectedToShare = "No es posible compartir todo, se necesita un criterio."
+    , loadMore = "Cargar más..."
+    , thatsAll = "¡Eso es todo!"
+    , showItemGroups = "Agrupar por mes"
+    , listView = "Vista de lista"
+    , tileView = "Vista de cuadrícula"
+    , expandCollapseRows = "Ampliar/Reducir todo"
+    , bookmarkQuery = "Buscar en los marcadores"
+    , nothingToBookmark = "No hay marcadores"
+    , submitMerge = "Fusionar"
+    , mergeInfoText = "Durante una fusión, el primer documento sirve de destino al cual se añaden los metadatos de los otros documentos. Si la propiedad es un valor único (como corresponsal) este se añade si no estaba presente. Etiquetas, campos personalizados y archivos adjuntos serán añadidos. Puede desplazar los documentos para ordenarlos."
+    , mergeDeleteWarn = "¡Atención, todos los documentos se eliminan después de un enlace exitoso!"
+    , submitMergeTitle = "Comenzar la fusión"
+    , cancelMergeTitle = "Anular la fusión"
+    , mergeSuccessful = "Documentos fusionados con éxito"
+    , mergeInProcess = "Fusión en curso..."
+    , linkItemsTitle = \n -> String.fromInt n ++ " Enlazar los documentos"
+    , linkItemsMessage = "La lista debe tener al menos dos documentos. El primer documento todos los otros como documentos enlazados."
+    , submitLinkItems = "Enlazar"
+    , submitLinkItemsTitle = ""
+    , cancelLinkItemsTitle = ""
+    , linkItemsSuccessful = "Enlace exitoso"
+    , linkItemsInProcess = "Enlace en curso..."
+    , mergeHeader = "Fusionar documentos"
+    , linkItemsHeader = "Enlazar documentos"
+    , downloadAll = "Descargar todo"
+    , downloadAllQueryNeeded = "No puede descargar todo, se necesita una búsqueda."
     }

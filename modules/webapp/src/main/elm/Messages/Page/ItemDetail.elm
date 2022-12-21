@@ -10,6 +10,7 @@ module Messages.Page.ItemDetail exposing
     , de
     , fr
     , gb
+    , es
     )
 
 import Data.TimeZone exposing (TimeZone)
@@ -50,3 +51,13 @@ fr tz =
     , editMetadata = "Editer les métadonnées"
     , collapseExpand = "Réduire/Etendre"
     }
+
+
+es : TimeZone -> Texts
+es tz =
+    { itemDetail = Messages.Comp.ItemDetail.fr tz
+    , editForm = Messages.Comp.ItemDetail.EditForm.fr tz
+    , editMetadata = "Editar los metadatos"
+    , collapseExpand = "Colapsar/Ampliar"
+    }
+

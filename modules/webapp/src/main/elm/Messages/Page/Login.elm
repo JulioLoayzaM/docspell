@@ -10,6 +10,7 @@ module Messages.Page.Login exposing
     , de
     , fr
     , gb
+    , es
     )
 
 import Http
@@ -97,3 +98,23 @@ fr =
     , or = "Ou"
     , oidcLogoutPending = "You have been logged out from Docspell, but you may still be logged in at your authentication provider! Make sure to logout there as well, or login again by clicking the link below."
     }
+
+es : Texts
+es =
+    { httpError = Messages.Comp.HttpError.es
+    , loginToDocspell = "Conexión a Docspell"
+    , username = "Nombre de usuario"
+    , collectiveSlashLogin = "Grupo / Usuario"
+    , password = "Contraseña"
+    , rememberMe = "Recordar cuenta"
+    , loginPlaceholder = "Nombre de usuario"
+    , passwordPlaceholder = "Contraseña"
+    , loginButton = "Conectarse"
+    , loginSuccessful = "Conexión exitosa"
+    , noAccount = "¿No tiene cuenta?"
+    , signupLink = "¡Inscríbase!"
+    , otpCode = "Código de autenticación"
+    , or = "O"
+    , oidcLogoutPending = "Ha sido desconectado de Docspell, pero puede que siga conectado a su proveedor de autenticación! Asegúrese de desconectarse del proveedor, o vuelva a conectarse con el vínculo aquí abajo."
+    }
+

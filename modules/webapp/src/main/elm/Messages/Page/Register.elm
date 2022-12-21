@@ -10,6 +10,7 @@ module Messages.Page.Register exposing
     , de
     , fr
     , gb
+    , es
     )
 
 import Http
@@ -94,3 +95,26 @@ fr =
     , passwordsDontMatch = "Les mots de passe ne correspondent pas."
     , allFieldsRequired = "Tous les champs sont requis !"
     }
+
+
+es : Texts
+es =
+    { basics = Messages.Basics.es
+    , httpError = Messages.Comp.HttpError.es
+    , signupToDocspell = "Inscribirse a Docspell"
+    , collectiveId = "Nombre de grupo"
+    , collective = "Grupo"
+    , userLogin = "Nombre de usuario"
+    , username = "Usuario"
+    , password = "Contraseña"
+    , passwordRepeat = "Contraseña (confirmación)"
+    , invitationKey = "Clave de la invitación"
+    , alreadySignedUp = "¿Ya inscrito?"
+    , signIn = "Conectarse"
+    , registrationSuccessful = "Inscripción terminada."
+    , passwordsDontMatch = "Las contraseñas no coinciden."
+    , allFieldsRequired = "¡Todos los campos son obligatorios!"
+    }
+
+
+

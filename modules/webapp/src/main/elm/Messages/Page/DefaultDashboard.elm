@@ -5,7 +5,7 @@
 -}
 
 
-module Messages.Page.DefaultDashboard exposing (Texts, de, fr, gb)
+module Messages.Page.DefaultDashboard exposing (Texts, de, fr, gb, es)
 
 import Messages.Basics
 
@@ -59,3 +59,17 @@ fr =
     , dueInDays = \n -> "Échéance dans " ++ String.fromInt n ++ " jours"
     , newDocsName = "Nouveaux documents"
     }
+
+
+es : Texts
+es =
+    { basics = Messages.Basics.es
+    , default = "Predeterminado"
+    , welcomeName = "Mensaje de bienvenida"
+    , welcomeTitle = "# Bienvenido a Docspell"
+    , welcomeBody = "Docspell guarda sus documentos organizados"
+    , summaryName = "Resumen"
+    , dueInDays = \n -> "Vence en " ++ String.fromInt n ++ " días"
+    , newDocsName = "Nuevos documentos"
+    }
+

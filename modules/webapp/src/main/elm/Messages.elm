@@ -67,6 +67,9 @@ get lang tz =
         French ->
             fr tz
 
+        Spanish ->
+            es tz
+
 
 {-| Get a ISO-3166-1 code of the given lanugage.
 -}
@@ -173,3 +176,27 @@ fr tz =
     , shareDetail = Messages.Page.ShareDetail.fr tz
     , dashboard = Messages.Page.Dashboard.fr tz
     }
+
+es : TimeZone -> Messages
+es tz =
+    { lang = Spanish
+    , timeZone = tz
+    , iso2 = "es"
+    , label = "Español"
+    , flagIcon = "flag-icon flag-icon-es"
+    , app = Messages.App.es
+    , collectiveSettings = Messages.Page.CollectiveSettings.fr tz
+    , login = Messages.Page.Login.es
+    , register = Messages.Page.Register.es
+    , newInvite = Messages.Page.NewInvite.fr
+    , upload = Messages.Page.Upload.fr
+    , itemDetail = Messages.Page.ItemDetail.fr tz
+    , queue = Messages.Page.Queue.es tz
+    , userSettings = Messages.Page.UserSettings.fr tz
+    , manageData = Messages.Page.ManageData.fr tz
+    , search = Messages.Page.Search.fr tz
+    , share = Messages.Page.Share.fr tz
+    , shareDetail = Messages.Page.ShareDetail.fr tz
+    , dashboard = Messages.Page.Dashboard.fr tz
+    }
+

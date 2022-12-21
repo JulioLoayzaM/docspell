@@ -10,6 +10,7 @@ module Messages.Basics exposing
     , de
     , fr
     , gb
+    , es
     )
 
 
@@ -190,3 +191,49 @@ afin de rendre ce document visible. Ce message sera ainsi masqué.
     , periodicQueries = "Requêtes Périodiques"
     , notificationHooks = "Webhooks"
     }
+
+es : Texts
+es =
+    { incoming = "Recibido"
+    , outgoing = "Enviado"
+    , deleted = "Eliminado"
+    , tags = "Etiquetas"
+    , items = "Documentos"
+    , submit = "Enviar"
+    , submitThisForm = "Enviar este formulario"
+    , cancel = "Cancelar"
+    , delete = "Eliminar"
+    , created = "Creado"
+    , edit = "Editar"
+    , back = "Atrás"
+    , backToList = "Volver a la lista"
+    , searchPlaceholder = "Buscar…"
+    , selectPlaceholder = "Seleccionar…"
+    , id = "Id"
+    , ok = "Ok"
+    , yes = "Si"
+    , no = "No"
+    , chooseTag = "Escoger una etiqueta…"
+    , loading = "Cargando…"
+    , name = "Nombre"
+    , organization = "Organización"
+    , person = "Persona"
+    , equipment = "Equipamiento"
+    , folder = "Carpeta"
+    , date = "Fecha"
+    , correspondent = "Corresponsal"
+    , concerning = "Concierne a"
+    , customFields = "Campos personalizados"
+    , direction = "Dirección"
+    , folderNotOwnerWarning =
+        """
+No es miembro de esta carpeta. Ahora este documento estará oculto
+en toda busqueda. Utilice una carpeta de la cual sea miembro para
+volver a mostrar este documento. Este mensaje será ocultado.
+                      """
+    , shares = "Shares"
+    , sources = "Fuentes"
+    , periodicQueries = "Consultas periódicas"
+    , notificationHooks = "Webhooks"
+    }
+

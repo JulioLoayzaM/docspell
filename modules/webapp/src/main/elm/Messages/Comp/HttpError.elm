@@ -9,6 +9,7 @@ module Messages.Comp.HttpError exposing
     ( de
     , fr
     , gb
+    , es
     )
 
 import Http
@@ -70,6 +71,24 @@ fr err =
     in
     errorToString texts err
 
+
+es : Http.Error -> String
+es err =
+    let
+        texts =
+            { badUrl = \url -> "Error con el vínculo: " ++ url
+            , timeout = "Tiempo de espera de la conexión agotado."
+            , networkError = "Error de red"
+            , invalidResponseStatus =
+                \status ->
+                    "Estado de respuesta inválido: " ++ String.fromInt status ++ "."
+            , invalidInput = "Entrada inválida para procesar la consulta."
+            , notFound = "El recurso solicitado no existe."
+            , invalidBody = \str -> "Error al decodificar la respuesta: " ++ str
+            , accessDenied = "Acceso denegado"
+            }
+    in
+    errorToString texts err
 
 
 -- Error Utilities

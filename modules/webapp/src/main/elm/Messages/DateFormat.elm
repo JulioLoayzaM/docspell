@@ -47,6 +47,9 @@ get lang =
         French ->
             fr
 
+        Spanish ->
+            es
+
 
 format : UiLanguage -> TimeZone -> (DateTimeMsg -> List Token) -> Int -> String
 format lang zone pattern millis =
@@ -246,6 +249,53 @@ fr =
     , lang = french
     }
 
+
+{-| French date formats; must be reviewed!
+-}
+es : DateTimeMsg
+es =
+    { dateLong =
+        [ DateFormat.dayOfWeekNameAbbreviated
+        , DateFormat.text ", "
+        , DateFormat.dayOfMonthSuffix
+        , DateFormat.text " "
+        , DateFormat.monthNameFull
+        , DateFormat.text " "
+        , DateFormat.yearNumber
+        ]
+    , dateShort =
+        [ DateFormat.dayOfMonthFixed
+        , DateFormat.text "."
+        , DateFormat.monthFixed
+        , DateFormat.text "."
+        , DateFormat.yearNumber
+        ]
+    , dateTimeLong =
+        [ DateFormat.dayOfWeekNameAbbreviated
+        , DateFormat.text ". "
+        , DateFormat.dayOfMonthSuffix
+        , DateFormat.text " "
+        , DateFormat.monthNameFull
+        , DateFormat.text " "
+        , DateFormat.yearNumber
+        , DateFormat.text ", "
+        , DateFormat.hourMilitaryNumber
+        , DateFormat.text ":"
+        , DateFormat.minuteFixed
+        ]
+    , dateTimeShort =
+        [ DateFormat.dayOfMonthFixed
+        , DateFormat.text "."
+        , DateFormat.monthFixed
+        , DateFormat.text "."
+        , DateFormat.yearNumber
+        , DateFormat.text " "
+        , DateFormat.hourMilitaryNumber
+        , DateFormat.text ":"
+        , DateFormat.minuteFixed
+        ]
+    , lang = french
+    }
 
 
 --- Languages for the DateFormat module
